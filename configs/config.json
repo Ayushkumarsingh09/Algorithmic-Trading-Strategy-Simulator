@@ -1,0 +1,21 @@
+{
+    "data": {
+      "historical_data_path": "data/historical_prices.csv",
+      "live_data_api": "https://api.example.com/market-data"
+    },
+    "strategy": {
+      "short_window": 10,
+      "long_window": 30,
+      "risk_per_trade": 0.01,
+      "stop_loss_pct": 0.02
+    },
+    "trading": {
+      "starting_cash": 100000,
+      "commission_pct": 0.001
+    },
+    "ml": {
+      "model_type": "random_forest",
+      "train_test_split_ratio": 0.8
+    }
+  }
+  

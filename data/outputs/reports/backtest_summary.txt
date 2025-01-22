@@ -1,0 +1,8 @@
+Backtest Summary Report
+------------------------
+Total Return: 15.50%
+Annualized Return: 18.20%
+Sharpe Ratio: 1.45
+Max Drawdown: -6.20%
+Starting Cash: $100,000.00
+Ending Portfolio Value: $115,500.00

@@ -1,0 +1,20 @@
+import matplotlib.pyplot as plt
+
+def plot_equity_curve(data, output_path="outputs/charts/equity_curve.png"):
+    plt.figure(figsize=(12, 6))
+    plt.plot(data['Date'], data['Portfolio Value'], label='Equity Curve', color='blue', linewidth=2)
+    plt.title('Equity Curve')
+    plt.xlabel('Date')
+    plt.ylabel('Portfolio Value')
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+
+    # Ensure directory exists
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
+    # Save chart
+    plt.savefig(output_path)
+    plt.close()
+
+    print(f"Equity curve saved to {output_path}")

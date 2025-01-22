@@ -1,0 +1,20 @@
+def plot_drawdown(data, output_path="outputs/charts/drawdown_chart.png"):
+    data['Drawdown'] = data['Portfolio Value'] / data['Portfolio Value'].cummax() - 1
+
+    plt.figure(figsize=(12, 6))
+    plt.plot(data['Date'], data['Drawdown'], label='Drawdown', color='red', linewidth=2)
+    plt.title('Drawdown Chart')
+    plt.xlabel('Date')
+    plt.ylabel('Drawdown')
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+
+    # Ensure directory exists
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
+    # Save chart
+    plt.savefig(output_path)
+    plt.close()
+
+    print(f"Drawdown chart saved to {output_path}")

@@ -1,0 +1,14 @@
+{
+    "starting_cash": 100000,
+    "risk_per_trade": 0.01,
+    "strategy": {
+      "name": "Mean Reversion with RSI",
+      "lookback_period": 14,
+      "rsi_buy_threshold": 30,
+      "rsi_sell_threshold": 70
+    },
+    "stop_loss": 0.02,
+    "take_profit": 0.04,
+    "leverage": 2
+  }
+  
